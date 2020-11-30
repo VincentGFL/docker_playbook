@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  tasks:
+  - name: 'Installing Docker'
+    apt:
+      pkg: 
+      - docker
+      - docker-compose
+      state: latest
+      update_cache: true
+
